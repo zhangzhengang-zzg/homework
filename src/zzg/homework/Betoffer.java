@@ -46,6 +46,6 @@ public class Betoffer {
 
     public List<Stake> getHighstakes() {
         Stake[] objects = highstakes.toArray(new Stake[0]);
-        return Arrays.stream(objects).sorted(Comparator.comparing(Stake::getStakeAmount)).collect(Collectors.toList());
+        return Arrays.stream(objects).sorted(Comparator.comparing(Stake::getStakeAmount,Comparator.reverseOrder())).collect(Collectors.toList());
     }
 }
